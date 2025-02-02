@@ -1,0 +1,175 @@
+#dictionaries
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+#access items
+# print(thisdict["brand"])
+# thisdict =	{
+#   "brand": "Ford",
+#   "model": "Mustang",
+#   "year": 1964
+# }
+# x = thisdict.get("model")
+# print(x)
+
+thisdict2 = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+x = thisdict2.keys()
+print(x)
+
+car = {
+"brand": "Ford",
+"model": "Mustang",
+"year": 1964
+}
+y = car.keys()
+print(y) #before the change
+car["color"] = "white"
+print(y) #after the change
+
+# change items
+# Change the "year" to 2018:
+
+thisdict3 = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+thisdict3["year"] = 2018
+
+# thisdict = {
+#   "brand": "Ford",
+#   "model": "Mustang",
+#   "year": 1964
+# }
+# thisdict.update({"year": 2020})
+
+# add items
+thisdict4 = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+thisdict4["color"] = "red"
+print(thisdict4)
+
+# thisdict = {
+#   "brand": "Ford",
+#   "model": "Mustang",
+#   "year": 1964
+# }
+# thisdict.update({"color": "red"})
+
+#remove items
+thisdict5 = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+thisdict5.pop("model")
+print(thisdict5)
+
+# The del keyword removes the item with the specified key name:
+# thisdict = {
+#   "brand": "Ford",
+#   "model": "Mustang",
+#   "year": 1964
+# }
+# del thisdict["model"]
+# print(thisdict)
+
+# the clear() method empties the dictionary:
+# thisdict = {
+#   "brand": "Ford",
+#   "model": "Mustang",
+#   "year": 1964
+# }
+# thisdict.clear()
+# print(thisdict)
+
+#loop
+for z in thisdict:
+    print(z) #it prints key
+
+for z in thisdict:
+    print(thisdict[z]) #it prints values
+    
+for x in thisdict.values():
+    print(x) #values
+    
+for x in thisdict.keys():
+    print(x) #keys
+
+for x, y in thisdict.items():
+    print(x, y) #key and value
+    
+#copy
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+mydict = thisdict.copy()
+print(mydict)
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+mydict = thisdict.copy()
+print(mydict)
+
+#nested
+myfamily = {
+  "child1" : {
+    "name" : "Emil",
+    "year" : 2004
+  },
+  "child2" : {
+    "name" : "Tobias",
+    "year" : 2007
+  },
+  "child3" : {
+    "name" : "Linus",
+    "year" : 2011
+  }
+}
+print(myfamily)
+
+child1 = {
+  "name" : "Emil",
+  "year" : 2004
+}
+child2 = {
+  "name" : "Tobias",
+  "year" : 2007
+}
+child3 = {
+  "name" : "Linus",
+  "year" : 2011
+}
+
+print(myfamily)
+
+myfamily = {
+  "child1" : child1,
+  "child2" : child2,
+  "child3" : child3
+}
+print(myfamily)
+
+print(myfamily["child2"]["name"])
+
+#Loop through the keys and values of all nested dictionaries:
+
+for x, obj in myfamily.items():
+    print(x)
+
+for y in obj:
+    print(y + ':', obj[y])
